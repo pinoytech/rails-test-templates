@@ -43,6 +43,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'spring-commands-rspec'
+  gem 'rails-controller-testing'
+  gem 'pry-rails'
 end
 
 group :test do
@@ -61,3 +63,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'simple_form'
+gem 'redcarpet'
+gem 'devise'
