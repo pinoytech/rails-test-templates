@@ -28,7 +28,7 @@
 dump.rdb
 
 # Ignore configuration files
-config/database.yml
+# config/database.yml
 config/puma.development.rb
 .env
 
