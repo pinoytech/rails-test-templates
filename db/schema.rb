@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_09_06_095037) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "achievements", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_095037) do
     t.string "cover_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_achievements_on_user_id"
   end
 
@@ -36,4 +39,5 @@ ActiveRecord::Schema.define(version: 2019_09_06_095037) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "achievements", "users"
 end
